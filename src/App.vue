@@ -1,13 +1,6 @@
 <template>
   <MainHeader />
   <MainCategory />
-<!--  <MainSubCategory/>-->
-<!--  <MainSidebar />-->
-<!--  <div class="main-content d-flex flex-column transition overflow-hidden">-->
-<!--    <ProductsGridPage />-->
-<!--    <MainFooter / >-->
-<!--  </div>-->
-<!--  <BottomNav />-->
 </template>
 
 <script lang="ts">

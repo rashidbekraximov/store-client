@@ -7,7 +7,7 @@
   >
     <div class="row align-items-center">
       <ul class="category-list">
-        <li v-for="category in categories" :key="category.name" class="category-item" @click="getGoods(category.cat)">
+        <li v-for="category in categories" :key="category.name" class="category-item">
           <!-- <img :src="category.icon" alt="" class="category-icon"> -->
           <span>{{ category.name }}</span>
         </li>

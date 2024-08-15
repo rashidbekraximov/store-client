@@ -7,7 +7,7 @@
   >
     <div class="row align-items-center">
       <ul class="category-list">
-        <li v-for="category in categories" :key="category.name" class="category-item">
+        <li v-for="category in categories" :key="category.name" class="category-item" @click="getProducts(category.cat)">
           <!-- <img :src="category.icon" alt="" class="category-icon"> -->
           <span>{{ category.name }}</span>
         </li>
@@ -78,12 +78,12 @@ export default defineComponent({
     const isSticky = ref(false);
 
     const categories = ref([
-      // { name: "Tavsiya qilingan", icon: "sale-icon.png", cat: "RECOMMENDED" },
+      { name: "Tavsiya qilingan", icon: "sale-icon.png", cat: "RECOMMENDED" },
       // { name: "Mobil telefon", icon: "cool-icon.png", cat: "PHONE" },
       // { name: "Kompyuter", icon: "cool-icon.png", cat: "COMPUTER" },
       // { name: "Bo'yanishlar", icon: "pool-icon.png", cat: "MAKE_UP" },
       { name: "Ayollar kiyimi", icon: "shoes-icon.png", cat: "WOMAN" },
-      // { name: "Do'kon", icon: "electronics-icon.png", cat: "MARKET" },
+      { name: "Do'kon", icon: "electronics-icon.png", cat: "MARKET" },
       // { name: "Aksessuarlar", icon: "appliances-icon.png", cat: "ACSESSUAR" },
       // { name: "Ichki kiyim", icon: "clothing-icon.png", cat: "UNDERWEAR" },
       { name: "Erkaklar kiyimi", icon: "car-icon.png", cat: "MANS" },

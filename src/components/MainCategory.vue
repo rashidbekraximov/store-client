@@ -60,40 +60,40 @@ export default defineComponent({
         this.loading = false; // Ensure loading is false in case of an error
       });
     },
-    getGoods(category) {
-      this.loading = true; // Set loading to true when the request starts
-      axios.get("sub-tab/" + category).then(res => {
-        this.cats = res.data;
-        this.getProducts(category);
-      }).catch(() => {
-        this.loading = false; // Ensure loading is false in case of an error
-      });
-    }
+    // getGoods(category) {
+    //   this.loading = true; // Set loading to true when the request starts
+    //   axios.get("sub-tab/" + category).then(res => {
+    //     this.cats = res.data;
+    //     this.getProducts(category);
+    //   }).catch(() => {
+    //     this.loading = false; // Ensure loading is false in case of an error
+    //   });
+    // }
   },
   created() {
-    this.getGoods("RECOMMENDED");
-    this.getProducts("RECOMMENDED");
+    // this.getGoods("RECOMMENDED");
+    this.getProducts("WOMAN");
   },
   setup() {
     const isSticky = ref(false);
 
     const categories = ref([
-      { name: "Tavsiya qilingan", icon: "sale-icon.png", cat: "RECOMMENDED" },
-      { name: "Mobil telefon", icon: "cool-icon.png", cat: "PHONE" },
-      { name: "Kompyuter", icon: "cool-icon.png", cat: "COMPUTER" },
-      { name: "Bo'yanishlar", icon: "pool-icon.png", cat: "MAKE_UP" },
-      { name: "Erkaklar kiyimi", icon: "car-icon.png", cat: "MANS" },
-      { name: "Do'kon", icon: "electronics-icon.png", cat: "MARKET" },
-      { name: "Aksessuarlar", icon: "appliances-icon.png", cat: "ACSESSUAR" },
-      { name: "Ichki kiyim", icon: "clothing-icon.png", cat: "UNDERWEAR" },
+      // { name: "Tavsiya qilingan", icon: "sale-icon.png", cat: "RECOMMENDED" },
+      // { name: "Mobil telefon", icon: "cool-icon.png", cat: "PHONE" },
+      // { name: "Kompyuter", icon: "cool-icon.png", cat: "COMPUTER" },
+      // { name: "Bo'yanishlar", icon: "pool-icon.png", cat: "MAKE_UP" },
       { name: "Ayollar kiyimi", icon: "shoes-icon.png", cat: "WOMAN" },
-      { name: "Ona va chaqaloq", icon: "accessories-icon.png", cat: "MAM_AND_BABY" },
+      // { name: "Do'kon", icon: "electronics-icon.png", cat: "MARKET" },
+      // { name: "Aksessuarlar", icon: "appliances-icon.png", cat: "ACSESSUAR" },
+      // { name: "Ichki kiyim", icon: "clothing-icon.png", cat: "UNDERWEAR" },
+      { name: "Erkaklar kiyimi", icon: "car-icon.png", cat: "MANS" },
+      // { name: "Ona va chaqaloq", icon: "accessories-icon.png", cat: "MAM_AND_BABY" },
       { name: "Poyabzal va sumkalar", icon: "beauty-icon.png", cat: "SHOES_AND_BAG" },
-      { name: "Uy to'qimachilik", icon: "beauty-icon.png", cat: "HOME_TEXTILE" },
-      { name: "Mebel", icon: "beauty-icon.png", cat: "FURNITURE" },
-      { name: "Avtomobil mahsulotlari", icon: "beauty-icon.png", cat: "CAR_ACSESSUAR" },
-      { name: "Kompyuter", icon: "beauty-icon.png", cat: "COMPUTER" },
-      { name: "Uy bezagi", icon: "beauty-icon.png", cat: "HOME_DECORATION" },
+      // { name: "Uy to'qimachilik", icon: "beauty-icon.png", cat: "HOME_TEXTILE" },
+      // { name: "Mebel", icon: "beauty-icon.png", cat: "FURNITURE" },
+      // { name: "Avtomobil mahsulotlari", icon: "beauty-icon.png", cat: "CAR_ACSESSUAR" },
+      // { name: "Kompyuter", icon: "beauty-icon.png", cat: "COMPUTER" },
+      // { name: "Uy bezagi", icon: "beauty-icon.png", cat: "HOME_DECORATION" },
       // { name: "Ещё", icon: "more-icon.png" }
     ]);
 
